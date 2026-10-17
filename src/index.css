@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #020307;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+  }
+}
+
+@keyframes pulse-entrance {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.7;
+    box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7);
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+    box-shadow: 0 0 25px 6px rgba(6, 182, 212, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 10px 25px -5px rgba(6, 182, 212, 0.3);
+  }
+}
+
+.animate-pulse-entrance {
+  animation: pulse-entrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
